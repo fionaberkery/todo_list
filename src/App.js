@@ -48,23 +48,26 @@ function App() {
       
       <hr></hr>
 
-      <ul>
-        {taskItems}
-      </ul>
-
+    
       <form onSubmit={saveNewTask}>
         <label htmlFor="new-task"> Add a new task : </label>
         <input id="new-task" type="text" onChange={handleTaskInput} value={newTask} />
-        <input type="submit" value="Save New Task" />  
+         
 
-        
+        <br></br><br></br>
         <input onClick={handleRadioInput} type="radio" id="high" name="isHighPriority" value="high" />
         <label for="high"> High Priority </label> 
         <input onClick={handleRadioInput} type="radio" id="low" name="isHighPriority" value=""/>
         <label for="low"> Low Priority </label>
-        
+        <br></br><br></br><br></br>
+        <input type="submit" value="Save New Task" /> 
         
       </form>
+
+      <ul>
+        {taskItems}
+      </ul>
+
       </div>
     )
 }
